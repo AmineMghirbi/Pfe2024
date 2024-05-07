@@ -1,6 +1,6 @@
 const RegisterUser = require("./daos/user.js");
 const Sequelize = require("sequelize");
-const sequelize = new Sequelize("PfeDb", "root", "Mavie@1995", {
+const sequelize = new Sequelize("PfeDb", "root", "********", {
   host: "localhost",
   port: 3306,
   dialect: 'mariadb',
