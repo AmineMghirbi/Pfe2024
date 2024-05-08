@@ -1,24 +1,20 @@
 
 const Sequelize = require("sequelize");
 module.exports = (sequelize) => {
-    const Customer = sequelize.define("User", {
+    const User = sequelize.define("User", {
         id: {
             type: Sequelize.INTEGER,
             primaryKey: true,
-            autoIncrement: true
+            field: 'id_user'
         },
-        firstName: {
+        username: {
             type: Sequelize.STRING,
-            field: 'FirstName'
-        },
-        lastName: {
-            type: Sequelize.STRING,
-            field: 'LastName'
+            field: 'username'
         }
     },{
-        tableName: 'User', // Specify the table name here
+        tableName: 'users', // Specify the table name here
         timestamps: false, // Optional: Disable timestamps (createdAt, updatedAt)
       });
     
-    return Customer;
+    return User;
 };
